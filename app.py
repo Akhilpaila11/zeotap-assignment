@@ -17,7 +17,7 @@ def create_rule_api():
         return jsonify({"error": str(e)}), 400  
 
 
-@app.route('/evaluate_rule', methods=['GET','POST'])  
+@app.route('/evaluate_rule', methods=['POST'])  
 def evaluate_rule_api():  
     rule_ast = request.json.get('ast')  
     data = request.json.get('data')  
